@@ -1,0 +1,159 @@
+ 
+    // useEffect(async() => {
+    //   const url = `https://stagingapi.sugarlogger.com/lab_group/${labGroupUuid}/patient_entry?per_page=15&date_from=2023-01-12&date_to=2024-01-12`;
+    //   const res= await fetch(url, {
+    //     method: 'GET',
+    //     headers: {
+    //       'Authorization': `${accessToken}`, 
+    //     },
+    //   })
+    //     .then((response )=> response.json())
+    //     .then((data)=>{
+    //       setPageData(data);
+    //       setPatientData(data.data);
+    //     })
+    //     .catch(error => {
+    //       console.error('Error during fetch:', error);
+    //     });
+    //     console.log(res);
+    // }, [labGroupUuid , accessToken]);
+    // const url = `https://stagingapi.sugarlogger.com/lab_group/${labGroupUuid}/patient_entry?per_page=${rowsPage}&date_from=2023-01-12&date_to=2024-01-12`;
+    
+  
+
+// console.log(JSON.stringify(pageData.meta.pagination) + " page data");
+// console.log(patientData+ " patient data");
+
+
+
+
+
+
+// {branchPop && (
+//     <form className="options">
+//       {status &&
+//         branches.map((item, index) => (
+//           <div className="option" key={index}>
+//             <label htmlFor={item.name}>
+//               {item.name}
+//             </label>
+//             <input
+//               type="checkbox"
+//               name={item.name}
+//               value={item.uuid}
+//               id=""
+//               onChange={handleCheckbox}
+//             />
+//           </div>
+//         ))}
+
+//       <div className="filter-btns">
+//         <button
+//           type="button"
+//           className="btn remove"
+//           onClick={() => {
+//             clearFilter
+//           }}
+//         >
+//           Remove filter
+//         </button>
+//         <button
+//           type="button"
+//           className="btn cancel"
+//           onClick={() =>setBranchPop(false)}
+//         >
+//           Cancel
+//         </button>
+//         <button
+//           type="button"
+//           className="btn apply"
+//           onClick={handleBranch}
+//         >
+//           Apply
+//         </button>
+//       </div>
+//     </form>
+//   )}
+
+
+
+
+
+  // useEffect(() => {
+  //   const constructedUrl = `https://stagingapi.sugarlogger.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry?per_page=${rowsPage}&page=${currentPage}&date_from=2023-01-12&date_to=2024-01-12`;
+  //   setUrl((prevUrl) => {
+  //     if (prevUrl !== constructedUrl) {
+  //       return constructedUrl;
+  //     }
+  //     return prevUrl;
+  //   });
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch(url, {
+  //         method: 'GET',
+  //         headers: {
+  //           'Authorization': `${accessToken}`,
+  //         },
+  //       })
+  //       const data =  await response.json();
+  //       setPageData(data);
+  //       setPatientData(data.data);
+  //       setCurrentPage(data.meta.pagination.current_page);
+  //       setRowsPage(data.meta.pagination.per_page);
+  //       setTotalPatient(data.meta.pagination.total);
+  //       setTotalPages(data.meta.pagination.total_pages);
+  //       console.log(data);
+  //       console.log(data.meta.pagination);
+
+  //     } catch (error) {
+  //       console.error('Error during fetch:'+ error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, [labGroupUuid, accessToken,url, rowsPage, currentPage]);
+  // Effect for labGroupUuid and accessToken changes
+
+
+  // Effect for url changes
+  // useEffect(() => {
+  //   // const constructedUrl =constructUrl();
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch(url, {
+  //         method: "GET",
+  //         headers: {
+  //           Authorization: `${accessToken}`,
+  //         },
+  //       });
+  //       const data = await response.json();
+  //       setPageData(data);
+  //       setPatientData(data.data);
+  //       setCurrentPage(data.meta.pagination.current_page);
+  //       setRowsPage(data.meta.pagination.per_page);
+  //       setTotalPatient(data.meta.pagination.total);
+  //       setTotalPages(data.meta.pagination.total_pages);
+
+  //     } catch (error) {
+  //       console.error("Error during fetch:" + error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, [url, accessToken]);
+
+
+
+  // const first=true;                                                                                         //${barnchLength > 0 ? `&branches=${branchFilter}` : ""}                                         statusLength > 0 ? `&status=${statusFilter}` : ""
+  // const url =`https://stagingapi.sugar.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry? ${first && barnchLength > 0 ? `branches=${branchFilter}` :  `&branches=${branchFilter}` }    ${first &&}&date_from=2023-01-12&date_to=2024-01-12`;
+
+
+  // const newUrl=`https://stagingapi.sugar.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry ${barnchLength || statusLength  || rowPage || currentPage? "?&":'?'} ${ barnchLength > 0 ? `branch=${branchFilter}` : ""} ${ statusLength > 0 ? `status=${statusFilter}` : "" }`;
+                                                                                                     
+  // const newUrl = `https://stagingapi.sugar.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry${barnchLength || statusLength || rowPage || currentPage ? "?" : ""}${barnchLength > 0 ? `branch=${branchFilter}` : ""}${statusLength > 0 ? `${barnchLength > 0 ? "&" : ""}status=${statusFilter}` : ""}`;
+
+  // console.log(url,newUrl);
+
+
+      // setUrl(`https://stagingapi.sugarlogger.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry?`);
+    //  ${branchLength > 0 ? `&branch=${branchFilter}` : ""}${statusLength > 0 ? `&filter_appointment_status=${statusFilter}` : ""}&date_from=2023-01-12&date_to=2024-01-12`)
+    // setUrl(`https://stagingapi.sugarlogger.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry${"?"}${branchLength > 0 ? `branch=${branchFilter}` : ""}${statusLength > 0 ? `${branchLength > 0 ? "&" : ""}filter_appointment_status=${statusFilter}` : ""}${(branchLength > 0 || statusLength > 0) ? "&" : ""}date_from=2023-01-12&date_to=2024-01-12`);
+    // setUrl(`https://stagingapi.sugarlogger.com/lab_group/${localStorage.getItem('lab_group_uuid')}/patient_entry${branchLength > 0 ? `branch=${branchFilter}` : ""}${statusLength > 0 ? `${branchLength > 0 ? "&" : ""}filter_appointment_status=${statusFilter}` : ""} ${(statusLength > 0 || branchLength  > 0) ?"&":""}date_from=2023-01-12&date_to=2024-01-12`);
